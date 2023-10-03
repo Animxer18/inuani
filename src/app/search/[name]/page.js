@@ -4,7 +4,7 @@ export default async function Search({ params }) {
   const query = decodeURIComponent(params.name);
 
   async function getSearchData() {
-    const res = await fetch(`https://api.enime.moe/search/${encodeURIComponent(query)}`, { cache: 'no-store' });
+    const res = await fetch(`https://api.amvstr.me/search/${encodeURIComponent(query)}`, { cache: 'no-store' });
     return res.json();
   }
 
