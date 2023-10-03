@@ -1,7 +1,7 @@
 export const generateMetadata = async ({ params }) => {
   const anime = params.name;
 
-  const response = await fetch(`https://api.consumet.org/anime/${encodeURIComponent(anime)}`);
+  const response = await fetch(`https://api.consumet.org/anime/gogoanime/${encodeURIComponent(anime)}`);
   const data = await response.json();
 
   return {
