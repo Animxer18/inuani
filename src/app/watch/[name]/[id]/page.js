@@ -22,7 +22,7 @@ export default function AnimePage({ params }) {
   useEffect(() => {
     async function getEpisodeData() {
       const res = await fetch(
-        `https://api.amvstr.me/anime/${encodeURIComponent(anime)}/episodes`,
+        `https://api.consumet.org/anime/${encodeURIComponent(anime)}/episodes`,
         { cache: "no-store" }
       );
       const data = await res.json();
@@ -42,7 +42,7 @@ export default function AnimePage({ params }) {
 
     async function getAniData() {
       const res = await fetch(
-        `https://api.amvstr.me/anime/${encodeURIComponent(anime)}`,
+        `https://api.consumet.org/anime/${encodeURIComponent(anime)}`,
         { cache: "no-store" }
       );
       const data = await res.json();
