@@ -1,7 +1,7 @@
 export const generateMetadata = async ({ params }) => {
   const anime = params.name;
 
-  const response = await fetch(`https://api.enime.moe/anime/${encodeURIComponent(anime)}`);
+  const response = await fetch(`https://api.amvstr.me/anime/${encodeURIComponent(anime)}`);
   const data = await response.json();
 
   return {
