@@ -3,9 +3,9 @@ export const generateMetadata = async ({ params }) => {
   const watch = params.id;
 
   const [episodeData, aniData] = await Promise.all([
-    fetch(`https://api.enime.moe/anime/${encodeURIComponent(anime)}/episodes`, { cache: 'no-store' })
+    fetch(`https://api.amvstr.me/anime/${encodeURIComponent(anime)}/episodes`, { cache: 'no-store' })
       .then((res) => res.json()),
-    fetch(`https://api.enime.moe/anime/${encodeURIComponent(anime)}`, { cache: 'no-store' })
+    fetch(`https://api.amvstr.me/anime/${encodeURIComponent(anime)}`, { cache: 'no-store' })
       .then((res) => res.json())
   ]);
 
