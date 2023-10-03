@@ -3,9 +3,9 @@ export const generateMetadata = async ({ params }) => {
   const watch = params.id;
 
   const [episodeData, aniData] = await Promise.all([
-    fetch(`https://api.consumet.org/anime/${encodeURIComponent(anime)}/episodes`, { cache: 'no-store' })
+    fetch(`https://api.consumet.org/anime/gogoanime/${encodeURIComponent(gogoanime)}/episodes`, { cache: 'no-store' })
       .then((res) => res.json()),
-    fetch(`https://api.consumet.org/anime/${encodeURIComponent(anime)}`, { cache: 'no-store' })
+    fetch(`https://api.consumet.org/anime/gogoanime/${encodeURIComponent(gogoanime)}`, { cache: 'no-store' })
       .then((res) => res.json())
   ]);
 
