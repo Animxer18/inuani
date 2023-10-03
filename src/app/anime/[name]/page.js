@@ -10,11 +10,11 @@ export default function AnimePage({ params }) {
   const [episodes, setEpisodes] = useState([]);
 
   useState(() => {
-    fetch(`https://api.consumet.org/${encodeURIComponent(anime)}`, { cache: 'no-store' })
+    fetch(`https://api.consumet.org/anime/gogoanime/${encodeURIComponent(gogoanime)}`, { cache: 'no-store' })
       .then((res) => res.json())
       .then((data) => setData(data));
 
-    fetch(`https://api.consumet.org/${encodeURIComponent(anime)}/episodes`, { cache: 'no-store' })
+    fetch(`https://api.consumet.org/anime/gogoanime/${encodeURIComponent(gogoanime)}/episodes`, { cache: 'no-store' })
       .then((res) => res.json())
       .then((episodes) => setEpisodes(episodes));
   }, []);
