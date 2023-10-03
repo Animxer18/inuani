@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 export default async function Page() {
   async function getAnimeData() {
-    const res = await fetch(`https://api.enime.moe/popular`, { cache: 'no-store' });
+    const res = await fetch(`https://api.amvstr.me/popular`, { cache: 'no-store' });
     return res.json();
   }
   async function getRecentAnimeData() {
-    const res = await fetch('https://api.enime.moe/recent', { cache: 'no-store' });
+    const res = await fetch('https://api.amvstr.me/recent', { cache: 'no-store' });
     return res.json();
   }
 
