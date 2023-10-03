@@ -22,7 +22,7 @@ export default function AnimePage({ params }) {
   useEffect(() => {
     async function getEpisodeData() {
       const res = await fetch(
-        `https://api.enime.moe/anime/${encodeURIComponent(anime)}/episodes`,
+        `https://api.amvstr.me/anime/${encodeURIComponent(anime)}/episodes`,
         { cache: "no-store" }
       );
       const data = await res.json();
@@ -31,7 +31,7 @@ export default function AnimePage({ params }) {
 
     async function getEpisodeWatch() {
       const res = await fetch(
-        `https://api.consumet.org/anime/enime/watch?episodeId=${encodeURIComponent(
+        `https://api.consumet.org/anime/gogoanime/watch?episodeId=${encodeURIComponent(
           watch
         )}`,
         { cache: "no-store" }
@@ -42,7 +42,7 @@ export default function AnimePage({ params }) {
 
     async function getAniData() {
       const res = await fetch(
-        `https://api.enime.moe/anime/${encodeURIComponent(anime)}`,
+        `https://api.amvstr.me/anime/${encodeURIComponent(anime)}`,
         { cache: "no-store" }
       );
       const data = await res.json();
